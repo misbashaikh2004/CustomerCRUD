@@ -22,7 +22,7 @@ public class CustomerController {
 
 	@Autowired
 	private CustomerService cs;
-//	vbkkl
+	
 
 	@PostMapping("add")
 	public void add(@RequestBody Customer c) {
