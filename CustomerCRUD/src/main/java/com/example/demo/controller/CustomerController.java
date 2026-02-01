@@ -27,6 +27,7 @@ public class CustomerController {
 	@PostMapping("add")
 	public void add(@RequestBody Customer c) {
 		cs.add(c);
+//		book
 	}
 
 	@PostMapping("add all")
