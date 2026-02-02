@@ -24,6 +24,11 @@ public class CustomerController {
 	private CustomerService cs;
 	
 
+	@GetMapping("/")
+	public String getMethodName(){
+		return "Hii";
+	}
+	
 	@PostMapping("add")
 	public void add(@RequestBody Customer c) {
 		cs.add(c);
