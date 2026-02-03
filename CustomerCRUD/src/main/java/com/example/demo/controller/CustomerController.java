@@ -20,6 +20,7 @@ import com.example.demo.service.CustomerService;
 
 @RestController
 @CrossOrigin(origins = "http://localhost:5173")
+
 public class CustomerController {
 
 	@Autowired
@@ -42,7 +43,7 @@ public class CustomerController {
 		cs.addAll(list);
 	}
 
-	@GetMapping("display")
+	@GetMapping("/display")
 	public List<Customer> display() {
 		return cs.display();
 	}
