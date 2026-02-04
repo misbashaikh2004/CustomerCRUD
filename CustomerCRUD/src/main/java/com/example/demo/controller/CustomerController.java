@@ -20,19 +20,19 @@ import com.example.demo.service.CustomerService;
 
 @RestController
 //@CrossOrigin(origins = "http://localhost:5173")
-@CrossOrigin(origins = "*")
+@CrossOrigin(origins="*")
 
 public class CustomerController {
 
 	@Autowired
 	private CustomerService cs;
-
-	// aefwerf efwefwefe
+	
+	//aefwerf efwefwefe
 	@GetMapping("/")
-	public String getMethodName() {
+	public String getMethodName(){
 		return "Hii";
 	}
-
+	
 	@PostMapping("add")
 	public void add(@RequestBody Customer c) {
 		cs.add(c);
@@ -79,12 +79,12 @@ public class CustomerController {
 	}
 
 	@PostMapping("search/name/{name}")
-	public List<Customer> searchName(@PathVariable String name) {
+	public List<Customer> searchName(@PathVariable String name){
 		return cs.findByName(name);
 	}
-
+	
 	@PostMapping("search/address/{address}")
-	public List<Customer> searchAddress(@PathVariable String address) {
+	public List<Customer> searchAddress(@PathVariable String address){
 		return cs.findByAddress(address);
 	}
 }
