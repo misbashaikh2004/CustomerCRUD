@@ -76,18 +76,18 @@ public class CustomerServiceImpl implements CustomerService {
 //		list.stream().filter(c->c.getAddress().equals(address))
 //		.findAny()
 //		.ifPresent(c->{throw new InvalidAddress("Address Already Exist");});
+//
+//		for (Customer custonAddress : list) {
+//			if (custonAddress.getAddress().equals(customer.getAddress())) {
+//				throw new InvalidAddress("Address is already present in records!");
+//			}
+//		}
 
-		for (Customer custonAddress : list) {
-			if (custonAddress.getAddress().equals(customer.getAddress())) {
-				throw new InvalidAddress("Address is already present in records!");
-			}
-		}
-
-		for (Customer customername : list) {
-			if (customername.getName().equals(customer.getName())) {
-				throw new InvalidName("Name Is Already Exist");
-			}
-		}
+//		for (Customer customername : list) {
+//			if (customername.getName().equals(customer.getName())) {
+//				throw new InvalidName("Name Is Already Exist");
+//			}
+//		}
 
 		customer.setId(id);
 		cr.save(customer); // save = insert
